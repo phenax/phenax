@@ -1,4 +1,4 @@
-const COLOR_ACCENT = '#519d9e';
+const COLOR_ACCENT = '#58c9b9';
 const COLOR_BLOCK = COLOR_ACCENT;
 const COLOR_PRIMARY = '#151823';
 const COLOR_FG = '#454853';
