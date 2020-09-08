@@ -43,7 +43,7 @@ const renderSvg = (rule, currentRow, rows) => {
 const width = 1500;
 const height = (SIZE + GAP) * MAX_ROWS;
 
-const fontSize = 60;
+const fontSize = 90;
 const padding = (height - fontSize); // TODO
 
 const template = ({ contents }) => `
@@ -53,11 +53,11 @@ const template = ({ contents }) => `
     fill="black"
     xml:space="preserve"
     font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
-    font-size="130"
+    font-size="${fontSize}"
     font-weight="bold"
     letter-spacing="0em"
   >
-    <tspan x="${width/2 - 430}" y="${height/2 + 30}" fill="${COLOR_FG}">Akshay <tspan fill="${COLOR_ACCENT}">Nair</tspan></tspan>
+    <tspan x="${width/2 - 3.29 * fontSize}" y="${height/2 + fontSize * 0.231}" fill="${COLOR_FG}">Akshay <tspan fill="${COLOR_ACCENT}">Nair</tspan></tspan>
   </text>
   <style>
     @keyframes animation {
