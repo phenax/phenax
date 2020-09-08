@@ -53,11 +53,11 @@ const template = ({ contents }) => `
     fill="black"
     xml:space="preserve"
     font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
-    font-size="80"
+    font-size="130"
     font-weight="bold"
     letter-spacing="0em"
   >
-    <tspan x="${width/2 - 260}" y="${height/2}" stroke="${COLOR_ACCENT}" fill="${COLOR_PRIMARY}">
+    <tspan x="${width/2 - 430}" y="${height/2 + 30}" stroke="${COLOR_ACCENT}" fill="${COLOR_PRIMARY}">
       Akshay Nair
     </tspan>
   </text>
