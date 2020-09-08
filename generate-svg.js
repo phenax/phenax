@@ -1,7 +1,7 @@
 const COLOR_ACCENT = '#519d9e';
 const COLOR_BLOCK = COLOR_ACCENT;
 const COLOR_PRIMARY = '#151823';
-const COLOR_FG = '#f1fff5';
+const COLOR_FG = '#454853';
 
 const getNextRow = (row, rule) => row.map((current, i) => {
   const prev = row[i - 1] || false;
@@ -47,7 +47,7 @@ const fontSize = 60;
 const padding = (height - fontSize); // TODO
 
 const template = ({ contents }) => `
-<svg viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg" style="background-color: ${COLOR_PRIMARY};">
+<svg viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
   ${contents}
   <text
     fill="black"
@@ -57,9 +57,7 @@ const template = ({ contents }) => `
     font-weight="bold"
     letter-spacing="0em"
   >
-    <tspan x="${width/2 - 430}" y="${height/2 + 30}" stroke="${COLOR_ACCENT}" fill="${COLOR_PRIMARY}">
-      Akshay Nair
-    </tspan>
+    <tspan x="${width/2 - 430}" y="${height/2 + 30}" fill="${COLOR_FG}">Akshay <tspan fill="${COLOR_ACCENT}">Nair</tspan></tspan>
   </text>
   <style>
     @keyframes animation {
