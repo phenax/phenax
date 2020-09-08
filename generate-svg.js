@@ -18,7 +18,7 @@ const RULE = rules[126];
 
 const getInitialRow = count => Array(count).fill(false).map(() => Math.random() > 0.5);
 
-const SIZE = 20;
+const SIZE = 25;
 const GAP = 5;
 const drawRow = (current, row) => current.map((state, col) => {
   const x = col * (SIZE + GAP);
@@ -34,7 +34,7 @@ const drawRow = (current, row) => current.map((state, col) => {
   `.replace(/\s+/g, ' ');
 }).join('');
 
-const MAX_ROWS = 15;
+const MAX_ROWS = 20;
 const renderSvg = (rule, currentRow, rows) => {
   if (rows > MAX_ROWS) return '';
   return drawRow(currentRow, rows) + renderSvg(rule, getNextRow(currentRow, rule), rows + 1);
@@ -49,6 +49,18 @@ const padding = (height - fontSize); // TODO
 const template = ({ contents }) => `
 <svg viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg" style="background-color: ${COLOR_PRIMARY};">
   ${contents}
+  <text
+    fill="black"
+    xml:space="preserve"
+    font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+    font-size="80"
+    font-weight="bold"
+    letter-spacing="0em"
+  >
+    <tspan x="${width/2 - 260}" y="${height/2}" stroke="${COLOR_ACCENT}" fill="${COLOR_PRIMARY}">
+      Akshay Nair
+    </tspan>
+  </text>
   <style>
     @keyframes animation {
       0% { opacity: 0.2; transform: scale(1); }
@@ -64,28 +76,6 @@ const template = ({ contents }) => `
       animation: animation 2s infinite ease-in-out;
     }
   </style>
-	<foreignObject width="100%" height="100%">
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <style>
-        .container {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          text-align: center;
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          color: ${COLOR_FG};
-        }
-        .name { font-size: ${fontSize}px; }
-        //.name span { color: ${COLOR_ACCENT}; }
-      </style>
-      <div class="container">
-        <div class="name">Akshay Nair</div>
-      </div>
-    </div>
-  </foreignObject>
 </svg>
 `.replace(/\s+/g, ' ');
 
