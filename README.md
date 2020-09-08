@@ -1,1 +1,1 @@
-[![Akshay Nair](./banner.svg)](https://phenax.github.io)
+[![Akshay Nair](https://github.com/timolins/timolins/raw/master/banner.svg)](https://phenax.github.io)
