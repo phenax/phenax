@@ -1,3 +1,1 @@
-
-
-
+![Akshay Nair](./banner.svg)
