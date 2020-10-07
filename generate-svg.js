@@ -18,7 +18,7 @@ const balls = {
 balls.startX = balls.size + width/2 - (balls.size + balls.spacing) * balls.count/2;
 
 const template = () => `
-<svg viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" style="background-color: ${COLOR_PRIMARY}; border: 1px solid red;" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" style="background-color: ${COLOR_PRIMARY};" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <filter id="gooey">
       <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
